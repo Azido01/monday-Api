@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 
 namespace monday_Api.Controllers
 {
@@ -17,7 +18,7 @@ namespace monday_Api.Controllers
         public IActionResult SendEmail(EmailDto request)
         {
             _emailService.SendEmail(request);
-            return Ok();
+            return Ok(); 
         }
     }
 }
